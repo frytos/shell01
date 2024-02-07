@@ -1,3 +1,3 @@
 #!/bin/sh
 
-find . | wc -l
+find . -type fd | wc -l
