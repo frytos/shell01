@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cat /etc/passwd
+cat /etc/passwd | sed '/\#/d'
