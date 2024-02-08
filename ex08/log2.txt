@@ -1,0 +1,1014 @@
+staff,everyone,localaccounts,_appserverusr,admin,_appserveradm,_lpadmin,com.apple.sharepoint.group.1,_appstore,_lpoperator,_developer,_analyticsusers,com.apple.access_ftp,com.apple.access_screensharing,com.apple.access_ssh,com.apple.access_remote_ae
+➜  ex01 git:(ex01) ✗ git status
+On branch ex01
+Your branch is up to date with 'origin/ex01'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   print_groups.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  ex01 git:(ex01) ✗ git add .
+➜  ex01 git:(ex01) ✗ git commit -m "adds g flag to sed cmd for substitution on all occurences"
+[ex01 3cf223f] adds g flag to sed cmd for substitution on all occurences
+ Committer: Fryt Os <frytos@Fryts-Mac-mini.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+➜  ex01 git:(ex01) git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Writing objects: 100% (4/4), 372 bytes | 372.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/frytos/shell01.git
+   190e061..3cf223f  ex01 -> ex01
+➜  ex01 git:(ex01)
+➜  ex01 git:(ex01)
+➜  ex01 git:(ex01) `
+bquote>
+➜  ex01 git:(ex01) pwd
+/Users/frytos/code/piscine/shell01/ex01
+➜  ex01 git:(ex01) cd ..
+➜  shell01 git:(ex01) ..
+➜  piscine l
+total 32
+drwxr-xr-x   6 frytos  staff   192B Feb  7 04:23 .
+drwxr-xr-x@  7 frytos  staff   224B Feb  5 21:06 ..
+-rw-r--r--@  1 frytos  staff   8.0K Feb  7 04:24 .DS_Store
+-rw-r--r--@  1 frytos  staff   841B Feb  6 03:21 resources.tar.gz
+drwxr-xr-x  13 frytos  staff   416B Feb  6 23:04 shell00
+drwxr-xr-x   4 frytos  staff   128B Feb  7 04:23 shell01
+➜  piscine cd shell01
+➜  shell01 git:(ex01) git status
+On branch ex01
+Your branch is up to date with 'origin/ex01'.
+
+nothing to commit, working tree clean
+➜  shell01 git:(ex01) git fetch --all
+remote: Enumerating objects: 48, done.
+remote: Counting objects: 100% (48/48), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 45 (delta 7), reused 45 (delta 7), pack-reused 0
+Unpacking objects: 100% (45/45), 4.02 KiB | 91.00 KiB/s, done.
+From https://github.com/frytos/shell01
+ + 3cf223f...178ecc6 ex01       -> origin/ex01  (forced update)
+➜  shell01 git:(ex01) git status
+On branch ex01
+Your branch and 'origin/ex01' have diverged,
+and have 1 and 12 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+➜  shell01 git:(ex01) git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+➜  shell01 git:(ex01) git pull gh
+fatal: 'gh' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+#!/bin/sh
+➜  shell01 git:(ex01) ..
+➜  piscine rm -rf
+➜  piscine ls
+resources.tar.gz shell00          shell01
+➜  piscine rm -rf shell01
+➜  piscine git clone git@vogsphere.42paris.fr:vogsphere/intra-uuid-65a78b4e-0dab-4ada-bd24-e29f5ec34e6e-5476442-argrouss s01
+Cloning into 's01'...
+remote: Enumerating objects: 49, done.
+remote: Counting objects: 100% (49/49), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 49 (delta 7), reused 0 (delta 0)
+Receiving objects: 100% (49/49), 4.33 KiB | 2.17 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+➜  piscine cd s01
+➜  s01 git:(ex01) git remote add gh https://github.com/frytos/s01.git
+➜  s01 git:(ex01) git push gh
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (49/49), 4.33 KiB | 4.33 MiB/s, done.
+Total 49 (delta 7), reused 49 (delta 7), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/frytos/s01.git
+ * [new branch]      ex01 -> ex01
+➜  s01 git:(ex01) mkdir ex06
+➜  s01 git:(ex01) cd ex06
+➜  ex06 git:(ex01) touch 2
+➜  ex06 git:(ex01) ✗ touch 3
+➜  ex06 git:(ex01) ✗ touch 4
+➜  ex06 git:(ex01) ✗ touch 45
+➜  ex06 git:(ex01) ✗ rm -rf 45
+➜  ex06 git:(ex01) ✗ touch 5
+➜  ex06 git:(ex01) ✗ touch 6
+➜  ex06 git:(ex01) ✗ touch 7
+➜  ex06 git:(ex01) ✗ touch 8
+➜  ex06 git:(ex01) ✗ ls -l | sed -n '1~2p'
+sed: 1: "1~2p": invalid command code ~
+➜  ex06 git:(ex01) ✗ ls -l | sed  '1~2p'
+sed: 1: "1~2p": invalid command code ~
+➜  ex06 git:(ex01) ✗ ls -l | sed  '1;2p'
+sed: 1: "1;2p": invalid command code ;
+➜  ex06 git:(ex01) ✗ ls -l | sed  -n 'p'
+total 0
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:20 2
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:20 3
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:20 4
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 5
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 6
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 7
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 8
+➜  ex06 git:(ex01) ✗ ls -l | sed  -n 'p;n'
+total 0
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:20 3
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 5
+-rw-r--r--@ 1 frytos  staff  0 Feb  8 01:22 7
+➜  ex06 git:(ex01) ✗ vim skip.sh
+➜  ex06 git:(ex01) ✗ ./skip.sh
+zsh: permission denied: ./skip.sh
+➜  ex06 git:(ex01) ✗ chmod 755 skip.sh
+➜  ex06 git:(ex01) ✗ ./skip.sh
+total 8
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:20 3
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 5
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 7
+-rwxr-xr-x@ 1 frytos  staff  32 Feb  8 01:37 skip.sh
+➜  ex06 git:(ex01) ✗ ls -l
+total 8
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:20 2
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:20 3
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:20 4
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 5
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 6
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 7
+-rw-r--r--@ 1 frytos  staff   0 Feb  8 01:22 8
+-rwxr-xr-x@ 1 frytos  staff  32 Feb  8 01:37 skip.sh
+➜  ex06 git:(ex01) ✗ git add skip.sh
+➜  ex06 git:(ex01) ✗ git commit -m "adds skip.sh"
+[ex01 6b16742] adds skip.sh
+ Committer: Fryt Os <frytos@Fryts-Mac-mini.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100755 ex06/skip.sh
+➜  ex06 git:(ex01) ✗ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 349 bytes | 349.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To vogsphere.42paris.fr:vogsphere/intra-uuid-65a78b4e-0dab-4ada-bd24-e29f5ec34e6e-5476442-argrouss
+   178ecc6..6b16742  ex01 -> ex01
+➜  ex06 git:(ex01) ✗ git push gh
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 349 bytes | 349.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/frytos/s01.git
+   178ecc6..6b16742  ex01 -> ex01
+➜  ex06 git:(ex01) ✗ ..
+➜  s01 git:(ex01) ✗ mkdir ex06
+mkdir: ex06: File exists
+➜  s01 git:(ex01) ✗ mkdir ex07
+➜  s01 git:(ex01) ✗ cd ex07
+➜  ex07 git:(ex01) ✗ cat /etc/passwd
+##
+# User Database
+#
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_appstore:*:33:33:Mac App Store Service:/var/db/appstore:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_geod:*:56:56:Geo Services Daemon:/var/db/geod:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_sandbox:*:60:60:Seatbelt:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_ard:*:67:67:Apple Remote Desktop:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_eppc:*:71:71:Apple Events User:/var/empty:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_svn:*:73:73:SVN Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_cyrus:*:77:6:Cyrus Administrator:/var/imap:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_appserver:*:79:79:Application Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_amavisd:*:83:83:AMaViS Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_appowner:*:87:87:Application Owner:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_spotlight:*:89:89:Spotlight:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_securityagent:*:92:92:SecurityAgent:/var/db/securityagent:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_teamsserver:*:94:94:TeamsServer:/var/teamsserver:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_installer:*:96:-2:Installer:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_ftp:*:98:-2:FTP Daemon:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_softwareupdate:*:200:200:Software Update Service:/var/db/softwareupdate:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_screensaver:*:203:203:Screensaver:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_trustevaluationagent:*:208:208:Trust Evaluation Agent:/var/empty:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_lda:*:211:211:Local Delivery Agent:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_usbmuxd:*:213:213:iPhone OS Device Helper:/var/db/lockdown:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_krbtgt:*:217:-2:Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_webauthserver:*:221:221:Web Auth Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_warmd:*:224:224:Warm Daemon:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_netstatistics:*:228:228:Network Statistics Daemon:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_krbtgt:*:230:-2:Open Directory Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_changepw:*:232:-2:Open Directory Kerberos Change Password Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_krb_anonymous:*:234:-2:Open Directory Kerberos Anonymous:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+_iconservices:*:240:240:IconServices:/var/empty:/usr/bin/false
+_distnote:*:241:241:DistNote:/var/empty:/usr/bin/false
+_nsurlsessiond:*:242:242:NSURLSession Daemon:/var/db/nsurlsessiond:/usr/bin/false
+_displaypolicyd:*:244:244:Display Policy Daemon:/var/empty:/usr/bin/false
+_astris:*:245:245:Astris Services:/var/db/astris:/usr/bin/false
+_krbfast:*:246:-2:Kerberos FAST Account:/var/empty:/usr/bin/false
+_gamecontrollerd:*:247:247:Game Controller Daemon:/var/empty:/usr/bin/false
+_mbsetupuser:*:248:248:Setup User:/var/setup:/bin/bash
+_ondemand:*:249:249:On Demand Resource Daemon:/var/db/ondemand:/usr/bin/false
+_xserverdocs:*:251:251:macOS Server Documents Service:/var/empty:/usr/bin/false
+_wwwproxy:*:252:252:WWW Proxy:/var/empty:/usr/bin/false
+_mobileasset:*:253:253:MobileAsset User:/var/ma:/usr/bin/false
+_findmydevice:*:254:254:Find My Device Daemon:/var/db/findmydevice:/usr/bin/false
+_datadetectors:*:257:257:DataDetectors:/var/db/datadetectors:/usr/bin/false
+_captiveagent:*:258:258:captiveagent:/var/empty:/usr/bin/false
+_ctkd:*:259:259:ctkd Account:/var/empty:/usr/bin/false
+_applepay:*:260:260:applepay Account:/var/db/applepay:/usr/bin/false
+_hidd:*:261:261:HID Service User:/var/db/hidd:/usr/bin/false
+_cmiodalassistants:*:262:262:CoreMedia IO Assistants User:/var/db/cmiodalassistants:/usr/bin/false
+_analyticsd:*:263:263:Analytics Daemon:/var/db/analyticsd:/usr/bin/false
+_fpsd:*:265:265:FPS Daemon:/var/db/fpsd:/usr/bin/false
+_timed:*:266:266:Time Sync Daemon:/var/db/timed:/usr/bin/false
+_nearbyd:*:268:268:Proximity and Ranging Daemon:/var/db/nearbyd:/usr/bin/false
+_reportmemoryexception:*:269:269:ReportMemoryException:/var/db/reportmemoryexception:/usr/bin/false
+_driverkit:*:270:270:DriverKit:/var/empty:/usr/bin/false
+_diskimagesiod:*:271:271:DiskImages IO Daemon:/var/db/diskimagesiod:/usr/bin/false
+_logd:*:272:272:Log Daemon:/var/db/diagnostics:/usr/bin/false
+_appinstalld:*:273:273:App Install Daemon:/var/db/appinstalld:/usr/bin/false
+_installcoordinationd:*:274:274:Install Coordination Daemon:/var/db/installcoordinationd:/usr/bin/false
+_demod:*:275:275:Demo Daemon:/var/empty:/usr/bin/false
+_rmd:*:277:277:Remote Management Daemon:/var/db/rmd:/usr/bin/false
+_accessoryupdater:*:278:278:Accessory Update Daemon:/var/db/accessoryupdater:/usr/bin/false
+_knowledgegraphd:*:279:279:Knowledge Graph Daemon:/var/db/knowledgegraphd:/usr/bin/false
+_coreml:*:280:280:CoreML Services:/var/db/coreml:/usr/bin/false
+_sntpd:*:281:281:SNTP Server Daemon:/var/empty:/usr/bin/false
+_trustd:*:282:282:trustd:/var/empty:/usr/bin/false
+_mmaintenanced:*:283:283:mmaintenanced:/var/db/mmaintenanced:/usr/bin/false
+_darwindaemon:*:284:284:Darwin Daemon:/var/db/darwindaemon:/usr/bin/false
+_notification_proxy:*:285:285:Notification Proxy:/var/empty:/usr/bin/false
+_avphidbridge:*:288:288:Apple Virtual Platform HID Bridge:/var/empty:/usr/bin/false
+_biome:*:289:289:Biome:/var/db/biome:/usr/bin/false
+_backgroundassets:*:291:291:Background Assets Service:/var/empty:/usr/bin/false
+_mobilegestalthelper:*:293:293:MobileGestaltHelper:/var/empty:/usr/bin/false
+_audiomxd:*:294:294:Audio and MediaExperience Daemon:/var/db/audiomxd:/usr/bin/false
+_terminusd:*:295:295:Terminus:/var/empty:/usr/bin/false
+_neuralengine:*:296:296:AppleNeuralEngine:/var/db/neuralengine:/usr/bin/false
+_oahd:*:441:441:OAH Daemon:/var/empty:/usr/bin/false
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d'
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_appstore:*:33:33:Mac App Store Service:/var/db/appstore:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_geod:*:56:56:Geo Services Daemon:/var/db/geod:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_sandbox:*:60:60:Seatbelt:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_ard:*:67:67:Apple Remote Desktop:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_eppc:*:71:71:Apple Events User:/var/empty:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_svn:*:73:73:SVN Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_cyrus:*:77:6:Cyrus Administrator:/var/imap:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_appserver:*:79:79:Application Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_amavisd:*:83:83:AMaViS Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_appowner:*:87:87:Application Owner:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_spotlight:*:89:89:Spotlight:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_securityagent:*:92:92:SecurityAgent:/var/db/securityagent:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_teamsserver:*:94:94:TeamsServer:/var/teamsserver:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_installer:*:96:-2:Installer:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_ftp:*:98:-2:FTP Daemon:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_softwareupdate:*:200:200:Software Update Service:/var/db/softwareupdate:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_screensaver:*:203:203:Screensaver:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_trustevaluationagent:*:208:208:Trust Evaluation Agent:/var/empty:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_lda:*:211:211:Local Delivery Agent:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_usbmuxd:*:213:213:iPhone OS Device Helper:/var/db/lockdown:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_krbtgt:*:217:-2:Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_webauthserver:*:221:221:Web Auth Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_warmd:*:224:224:Warm Daemon:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_netstatistics:*:228:228:Network Statistics Daemon:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_krbtgt:*:230:-2:Open Directory Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_changepw:*:232:-2:Open Directory Kerberos Change Password Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_krb_anonymous:*:234:-2:Open Directory Kerberos Anonymous:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+_iconservices:*:240:240:IconServices:/var/empty:/usr/bin/false
+_distnote:*:241:241:DistNote:/var/empty:/usr/bin/false
+_nsurlsessiond:*:242:242:NSURLSession Daemon:/var/db/nsurlsessiond:/usr/bin/false
+_displaypolicyd:*:244:244:Display Policy Daemon:/var/empty:/usr/bin/false
+_astris:*:245:245:Astris Services:/var/db/astris:/usr/bin/false
+_krbfast:*:246:-2:Kerberos FAST Account:/var/empty:/usr/bin/false
+_gamecontrollerd:*:247:247:Game Controller Daemon:/var/empty:/usr/bin/false
+_mbsetupuser:*:248:248:Setup User:/var/setup:/bin/bash
+_ondemand:*:249:249:On Demand Resource Daemon:/var/db/ondemand:/usr/bin/false
+_xserverdocs:*:251:251:macOS Server Documents Service:/var/empty:/usr/bin/false
+_wwwproxy:*:252:252:WWW Proxy:/var/empty:/usr/bin/false
+_mobileasset:*:253:253:MobileAsset User:/var/ma:/usr/bin/false
+_findmydevice:*:254:254:Find My Device Daemon:/var/db/findmydevice:/usr/bin/false
+_datadetectors:*:257:257:DataDetectors:/var/db/datadetectors:/usr/bin/false
+_captiveagent:*:258:258:captiveagent:/var/empty:/usr/bin/false
+_ctkd:*:259:259:ctkd Account:/var/empty:/usr/bin/false
+_applepay:*:260:260:applepay Account:/var/db/applepay:/usr/bin/false
+_hidd:*:261:261:HID Service User:/var/db/hidd:/usr/bin/false
+_cmiodalassistants:*:262:262:CoreMedia IO Assistants User:/var/db/cmiodalassistants:/usr/bin/false
+_analyticsd:*:263:263:Analytics Daemon:/var/db/analyticsd:/usr/bin/false
+_fpsd:*:265:265:FPS Daemon:/var/db/fpsd:/usr/bin/false
+_timed:*:266:266:Time Sync Daemon:/var/db/timed:/usr/bin/false
+_nearbyd:*:268:268:Proximity and Ranging Daemon:/var/db/nearbyd:/usr/bin/false
+_reportmemoryexception:*:269:269:ReportMemoryException:/var/db/reportmemoryexception:/usr/bin/false
+_driverkit:*:270:270:DriverKit:/var/empty:/usr/bin/false
+_diskimagesiod:*:271:271:DiskImages IO Daemon:/var/db/diskimagesiod:/usr/bin/false
+_logd:*:272:272:Log Daemon:/var/db/diagnostics:/usr/bin/false
+_appinstalld:*:273:273:App Install Daemon:/var/db/appinstalld:/usr/bin/false
+_installcoordinationd:*:274:274:Install Coordination Daemon:/var/db/installcoordinationd:/usr/bin/false
+_demod:*:275:275:Demo Daemon:/var/empty:/usr/bin/false
+_rmd:*:277:277:Remote Management Daemon:/var/db/rmd:/usr/bin/false
+_accessoryupdater:*:278:278:Accessory Update Daemon:/var/db/accessoryupdater:/usr/bin/false
+_knowledgegraphd:*:279:279:Knowledge Graph Daemon:/var/db/knowledgegraphd:/usr/bin/false
+_coreml:*:280:280:CoreML Services:/var/db/coreml:/usr/bin/false
+_sntpd:*:281:281:SNTP Server Daemon:/var/empty:/usr/bin/false
+_trustd:*:282:282:trustd:/var/empty:/usr/bin/false
+_mmaintenanced:*:283:283:mmaintenanced:/var/db/mmaintenanced:/usr/bin/false
+_darwindaemon:*:284:284:Darwin Daemon:/var/db/darwindaemon:/usr/bin/false
+_notification_proxy:*:285:285:Notification Proxy:/var/empty:/usr/bin/false
+_avphidbridge:*:288:288:Apple Virtual Platform HID Bridge:/var/empty:/usr/bin/false
+_biome:*:289:289:Biome:/var/db/biome:/usr/bin/false
+_backgroundassets:*:291:291:Background Assets Service:/var/empty:/usr/bin/false
+_mobilegestalthelper:*:293:293:MobileGestaltHelper:/var/empty:/usr/bin/false
+_audiomxd:*:294:294:Audio and MediaExperience Daemon:/var/db/audiomxd:/usr/bin/false
+_terminusd:*:295:295:Terminus:/var/empty:/usr/bin/false
+_neuralengine:*:296:296:AppleNeuralEngine:/var/db/neuralengine:/usr/bin/false
+_oahd:*:441:441:OAH Daemon:/var/empty:/usr/bin/false
+➜  ex07 git:(ex01) ✗ cat /etc/passwd > 00
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' > 01
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p'
+root:*:0:0:System Administrator:/var/root:/bin/sh
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_appstore:*:33:33:Mac App Store Service:/var/db/appstore:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+_distnote:*:241:241:DistNote:/var/empty:/usr/bin/false
+_displaypolicyd:*:244:244:Display Policy Daemon:/var/empty:/usr/bin/false
+_krbfast:*:246:-2:Kerberos FAST Account:/var/empty:/usr/bin/false
+_mbsetupuser:*:248:248:Setup User:/var/setup:/bin/bash
+_xserverdocs:*:251:251:macOS Server Documents Service:/var/empty:/usr/bin/false
+_mobileasset:*:253:253:MobileAsset User:/var/ma:/usr/bin/false
+_datadetectors:*:257:257:DataDetectors:/var/db/datadetectors:/usr/bin/false
+_ctkd:*:259:259:ctkd Account:/var/empty:/usr/bin/false
+_hidd:*:261:261:HID Service User:/var/db/hidd:/usr/bin/false
+_analyticsd:*:263:263:Analytics Daemon:/var/db/analyticsd:/usr/bin/false
+_timed:*:266:266:Time Sync Daemon:/var/db/timed:/usr/bin/false
+_reportmemoryexception:*:269:269:ReportMemoryException:/var/db/reportmemoryexception:/usr/bin/false
+_diskimagesiod:*:271:271:DiskImages IO Daemon:/var/db/diskimagesiod:/usr/bin/false
+_appinstalld:*:273:273:App Install Daemon:/var/db/appinstalld:/usr/bin/false
+_demod:*:275:275:Demo Daemon:/var/empty:/usr/bin/false
+_accessoryupdater:*:278:278:Accessory Update Daemon:/var/db/accessoryupdater:/usr/bin/false
+_coreml:*:280:280:CoreML Services:/var/db/coreml:/usr/bin/false
+_trustd:*:282:282:trustd:/var/empty:/usr/bin/false
+_darwindaemon:*:284:284:Darwin Daemon:/var/db/darwindaemon:/usr/bin/false
+_avphidbridge:*:288:288:Apple Virtual Platform HID Bridge:/var/empty:/usr/bin/false
+_backgroundassets:*:291:291:Background Assets Service:/var/empty:/usr/bin/false
+_audiomxd:*:294:294:Audio and MediaExperience Daemon:/var/db/audiomxd:/usr/bin/false
+_neuralengine:*:296:296:AppleNeuralEngine:/var/db/neuralengine:/usr/bin/false
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' > 02
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}'
+root
+_uucp
+_networkd
+_lp
+_scsd
+_appstore
+_appleevents
+_devdocs
+_mdnsresponder
+_www
+_cvs
+_mysql
+_qtss
+_mailman
+_clamav
+_jabber
+_windowserver
+_tokend
+_calendar
+_update_sharing
+_atsserver
+_unknown
+_coreaudiod
+_locationd
+_timezone
+_cvmsroot
+_dovecot
+_postgres
+_kadmin_admin
+_devicemgr
+_netbios
+_dovenull
+_avbdeviced
+_krb_kadmin
+_krb_kerberos
+_assetcache
+_launchservicesd
+_distnote
+_displaypolicyd
+_krbfast
+_mbsetupuser
+_xserverdocs
+_mobileasset
+_datadetectors
+_ctkd
+_hidd
+_analyticsd
+_timed
+_reportmemoryexception
+_diskimagesiod
+_appinstalld
+_demod
+_accessoryupdater
+_coreml
+_trustd
+_darwindaemon
+_avphidbridge
+_backgroundassets
+_audiomxd
+_neuralengine
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}'
+➜  ex07 git:(ex01) ✗ ls
+00 01 02
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' > 03
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev
+toor
+pcuu_
+dkrowten_
+pl_
+dscs_
+erotsppa_
+stneveelppa_
+scodved_
+rednopsersndm_
+www_
+svc_
+lqsym_
+sstq_
+namliam_
+vamalc_
+rebbaj_
+revreswodniw_
+dnekot_
+radnelac_
+gnirahs_etadpu_
+revressta_
+nwonknu_
+doiduaeroc_
+dnoitacol_
+enozemit_
+toorsmvc_
+tocevod_
+sergtsop_
+nimda_nimdak_
+rgmecived_
+soibten_
+llunevod_
+decivedbva_
+nimdak_brk_
+sorebrek_brk_
+ehcactessa_
+dsecivreshcnual_
+etontsid_
+dycilopyalpsid_
+tsafbrk_
+resuputesbm_
+scodrevresx_
+tessaelibom_
+srotcetedatad_
+dktc_
+ddih_
+dscitylana_
+demit_
+noitpecxeyromemtroper_
+doisegamiksid_
+dllatsnippa_
+domed_
+retadpuyrossecca_
+lmeroc_
+dtsurt_
+nomeadniwrad_
+egdirbdihpva_
+stessadnuorgkcab_
+dxmoidua_
+enignelaruen_
+➜  ex07 git:(ex01) ✗ ls
+00 01 02 03
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}'
+root
+_uucp
+_networkd
+_lp
+_scsd
+_appstore
+_appleevents
+_devdocs
+_mdnsresponder
+_www
+_cvs
+_mysql
+_qtss
+_mailman
+_clamav
+_jabber
+_windowserver
+_tokend
+_calendar
+_update_sharing
+_atsserver
+_unknown
+_coreaudiod
+_locationd
+_timezone
+_cvmsroot
+_dovecot
+_postgres
+_kadmin_admin
+_devicemgr
+_netbios
+_dovenull
+_avbdeviced
+_krb_kadmin
+_krb_kerberos
+_assetcache
+_launchservicesd
+_distnote
+_displaypolicyd
+_krbfast
+_mbsetupuser
+_xserverdocs
+_mobileasset
+_datadetectors
+_ctkd
+_hidd
+_analyticsd
+_timed
+_reportmemoryexception
+_diskimagesiod
+_appinstalld
+_demod
+_accessoryupdater
+_coreml
+_trustd
+_darwindaemon
+_avphidbridge
+_backgroundassets
+_audiomxd
+_neuralengine
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev
+toor
+pcuu_
+dkrowten_
+pl_
+dscs_
+erotsppa_
+stneveelppa_
+scodved_
+rednopsersndm_
+www_
+svc_
+lqsym_
+sstq_
+namliam_
+vamalc_
+rebbaj_
+revreswodniw_
+dnekot_
+radnelac_
+gnirahs_etadpu_
+revressta_
+nwonknu_
+doiduaeroc_
+dnoitacol_
+enozemit_
+toorsmvc_
+tocevod_
+sergtsop_
+nimda_nimdak_
+rgmecived_
+soibten_
+llunevod_
+decivedbva_
+nimdak_brk_
+sorebrek_brk_
+ehcactessa_
+dsecivreshcnual_
+etontsid_
+dycilopyalpsid_
+tsafbrk_
+resuputesbm_
+scodrevresx_
+tessaelibom_
+srotcetedatad_
+dktc_
+ddih_
+dscitylana_
+demit_
+noitpecxeyromemtroper_
+doisegamiksid_
+dllatsnippa_
+domed_
+retadpuyrossecca_
+lmeroc_
+dtsurt_
+nomeadniwrad_
+egdirbdihpva_
+stessadnuorgkcab_
+dxmoidua_
+enignelaruen_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev > 04
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort
+ddih_
+decivedbva_
+demit_
+dkrowten_
+dktc_
+dllatsnippa_
+dnekot_
+dnoitacol_
+doiduaeroc_
+doisegamiksid_
+domed_
+dscitylana_
+dscs_
+dsecivreshcnual_
+dtsurt_
+dxmoidua_
+dycilopyalpsid_
+egdirbdihpva_
+ehcactessa_
+enignelaruen_
+enozemit_
+erotsppa_
+etontsid_
+gnirahs_etadpu_
+llunevod_
+lmeroc_
+lqsym_
+namliam_
+nimda_nimdak_
+nimdak_brk_
+noitpecxeyromemtroper_
+nomeadniwrad_
+nwonknu_
+pcuu_
+pl_
+radnelac_
+rebbaj_
+rednopsersndm_
+resuputesbm_
+retadpuyrossecca_
+revressta_
+revreswodniw_
+rgmecived_
+scodrevresx_
+scodved_
+sergtsop_
+soibten_
+sorebrek_brk_
+srotcetedatad_
+sstq_
+stessadnuorgkcab_
+stneveelppa_
+svc_
+tessaelibom_
+tocevod_
+toor
+toorsmvc_
+tsafbrk_
+vamalc_
+www_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r
+www_
+vamalc_
+tsafbrk_
+toorsmvc_
+toor
+tocevod_
+tessaelibom_
+svc_
+stneveelppa_
+stessadnuorgkcab_
+sstq_
+srotcetedatad_
+sorebrek_brk_
+soibten_
+sergtsop_
+scodved_
+scodrevresx_
+rgmecived_
+revreswodniw_
+revressta_
+retadpuyrossecca_
+resuputesbm_
+rednopsersndm_
+rebbaj_
+radnelac_
+pl_
+pcuu_
+nwonknu_
+nomeadniwrad_
+noitpecxeyromemtroper_
+nimdak_brk_
+nimda_nimdak_
+namliam_
+lqsym_
+lmeroc_
+llunevod_
+gnirahs_etadpu_
+etontsid_
+erotsppa_
+enozemit_
+enignelaruen_
+ehcactessa_
+egdirbdihpva_
+dycilopyalpsid_
+dxmoidua_
+dtsurt_
+dsecivreshcnual_
+dscs_
+dscitylana_
+domed_
+doisegamiksid_
+doiduaeroc_
+dnoitacol_
+dnekot_
+dllatsnippa_
+dktc_
+dkrowten_
+demit_
+decivedbva_
+ddih_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r > 05
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n 1
+www_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $
+➜  ex07 git:(ex01) ✗ FT_LINE2=10
+➜  ex07 git:(ex01) ✗ FT_LINE1=7
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2
+www_
+vamalc_
+tsafbrk_
+toorsmvc_
+toor
+tocevod_
+tessaelibom_
+svc_
+stneveelppa_
+stessadnuorgkcab_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $FT_LINE1
+toorsmvc_
+toor
+tocevod_
+tessaelibom_
+svc_
+stneveelppa_
+stessadnuorgkcab_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $($FT_LINE2 - $FT_LINE1)
+zsh: command not found: 10
+tail: option requires an argument -- n
+usage: tail [-F | -f | -r] [-q] [-b # | -c # | -n #] [file ...]
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( $FT_LINE2 - $FT_LINE1 )
+zsh: command not found: 10
+tail: option requires an argument -- n
+usage: tail [-F | -f | -r] [-q] [-b # | -c # | -n #] [file ...]
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 )
+svc_
+stneveelppa_
+stessadnuorgkcab_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 +1 )
+expr: syntax error
+tail: option requires an argument -- n
+usage: tail [-F | -f | -r] [-q] [-b # | -c # | -n #] [file ...]
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 )
+tessaelibom_
+svc_
+stneveelppa_
+stessadnuorgkcab_
+➜  ex07 git:(ex01) ✗ ls
+00 01 02 03 04 05
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 > 06
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( $FT_LINE2 - $FT_LINE1 ) > 07
+zsh: command not found: 10
+tail: option requires an argument -- n
+usage: tail [-F | -f | -r] [-q] [-b # | -c # | -n #] [file ...]
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 ) > 07
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) > 08
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ', '
+tessaelibom_,svc_,stneveelppa_,stessadnuorgkcab_,%
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | sed 's/\\n/, /g'
+tessaelibom_
+svc_
+stneveelppa_
+stessadnuorgkcab_
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ','
+tessaelibom_,svc_,stneveelppa_,stessadnuorgkcab_,%
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' > 09
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed '&,&, &'
+sed: 1: "&,&, &": invalid command code &
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed ''
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed 's&,&, &g'
+tessaelibom_, svc_, stneveelppa_, stessadnuorgkcab_, %
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed 's&,&, &g' | rev | sed 's/ ,/./' |  rev
+tessaelibom_, svc_, stneveelppa_, stessadnuorgkcab_.
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed 's&,&, &g' | rev | sed 's/ ,/./' |  rev | tr -d '\n'
+tessaelibom_, svc_, stneveelppa_, stessadnuorgkcab_.%
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed '&,&, &'
+sed: 1: "&,&, &": invalid command code &
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed 's&,&, &g'
+tessaelibom_, svc_, stneveelppa_, stessadnuorgkcab_, %
+➜  ex07 git:(ex01) ✗ cat /etc/passwd | sed '/\#/d' | sed -n 'n;p' | awk -F: '{print $1}' | rev | sort -r | head -n $FT_LINE2 | tail -n $( expr $FT_LINE2 - $FT_LINE1 + 1 ) | tr '\n' ',' | sed 's&,&, &g' > 10
+➜  ex07 git:(ex01) ✗ pwd
+/Users/frytos/code/piscine/s01/ex07
+➜  ex07 git:(ex01) ✗ ..
+➜  s01 git:(ex01) ✗ cd ex08
+➜  ex08 git:(ex01) ✗ tr '\'\\\"\?\!' '43210'
+quote>
+➜  ex08 git:(ex01) ✗ cat !!!
+quote>
+➜  ex08 git:(ex01) ✗ cat tr '\'\\\"\?\!' '43210'!
+➜  ex08 git:(ex01) ✗ cd ex08
+➜  ex08 git:(ex01) ✗ pwd
+➜  ex08 git:(ex01) ✗ echo !!!!
+quote>
+➜  ex08 git:(ex01) ✗ echo tr '\'\\\"\?\!' '43210'!!
+➜  ex08 git:(ex01) ✗ echo '!!!'
+!!!
+➜  ex08 git:(ex01) ✗ echo '!!!' | tr '\'\\\"\?\!' '43210'
+pipe quote> echo '!!!'
+➜  ex08 git:(ex01) ✗ echo '!!!' | tr "\'\\\"\?\!" "43210"
+111
+➜  ex08 git:(ex01) ✗ echo '42' | tr "1234567890" "ABCDEFGHIJ"
+DB
+➜  ex08 git:(ex01) ✗ echo $((5#24441423))
+233988
+➜  ex08 git:(ex01) ✗ echo "ibase=16; C0" | bc
+192
+➜  ex08 git:(ex01) ✗ echo "ibase=16; obase=A; C0" | bc
+192
+➜  ex08 git:(ex01) ✗ echo $FT_LINE
+
+➜  ex08 git:(ex01) ✗ echo
